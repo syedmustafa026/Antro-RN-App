@@ -10,7 +10,7 @@ const Designation = ({ navigation }: any) => {
     navigation.goBack();
   };
   const btnContinueHandler = () => {
-    navigation.navigate(SCREEN_NAMES.home);
+    navigation.navigate(SCREEN_NAMES.dashboard);
   };
 
   return (
