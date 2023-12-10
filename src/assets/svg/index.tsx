@@ -21,7 +21,9 @@ import HomeIcon from "./home.svg";
 import SearchIcon from "./search.svg";
 import PlainMessageIcon from "./plainMessage.svg";
 import MenuBar from "./horizontalBars.svg";
-
+import CrossIcon from "./cross.svg";
+import BlueCheck from "./blue-check.svg";
+import CreateUserProfile from "./create-user.svg";
 export {
   AntroLogoSvg,
   PartyIcon,
@@ -45,5 +47,8 @@ export {
   HomeIcon,
   SearchIcon,
   PlainMessageIcon,
-  MenuBar
+  MenuBar,
+  CrossIcon,
+  BlueCheck,
+  CreateUserProfile,
 };

@@ -25,7 +25,7 @@ const Navigation = () => {
     <NativeBaseProvider theme={theme}>
       <NavigationContainer>
         <Stack.Navigator
-          initialRouteName={SCREEN_NAMES.splash}
+          initialRouteName={SCREEN_NAMES.dashboard}
           screenOptions={{
             headerShown: false,
             gestureEnabled: false,

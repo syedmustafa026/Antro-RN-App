@@ -4,14 +4,21 @@ import { Box, Text } from "../../components";
 import { AntroLogo, BellIcon, Wave } from "../../assets/svg";
 import { NewProfileBox } from "../../components/CustomComponents/NewProfileBox";
 import { ProfileBox } from "../../components/CustomComponents/ProfileBox";
-import ProfileModal1 from "../../components/CustomComponents/ProfilesModal1";
+import ProfileModal1 from "../../components/CustomComponents/ProfileModal1";
+import ProfileModal2 from "../../components/CustomComponents/ProfileModal2";
 
 const Home = ({ navigation }: any) => {
   const [profileModal, setProfileModal] = useState(false);
+  const [profileModa2, setProfileModa2] = useState(false);
 
   return (
     <ScrollView>
-      <ProfileModal1 setModalVisible={setProfileModal} visible={profileModal} />
+      <ProfileModal1
+        setModalVisible={setProfileModal}
+        setModa2lVisible={setProfileModa2}
+        modal2Visible={profileModa2}
+        visible={profileModal}
+      />
       <Box flex={1} padding={"8"}>
         <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
           <View style={{ flexDirection: "row", alignItems: "center" }}>
