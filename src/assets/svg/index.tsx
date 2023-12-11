@@ -24,6 +24,10 @@ import MenuBar from "./horizontalBars.svg";
 import CrossIcon from "./cross.svg";
 import BlueCheck from "./blue-check.svg";
 import CreateUserProfile from "./create-user.svg";
+import RectangleIcon from "./rectangle.svg";
+import EditIcon from "./edit.svg";
+import TrashIcon from "./trash.svg";
+import BackLeftArrow from "./back-arrow-left.svg";
 export {
   AntroLogoSvg,
   PartyIcon,
@@ -51,4 +55,8 @@ export {
   CrossIcon,
   BlueCheck,
   CreateUserProfile,
+  RectangleIcon,
+  EditIcon,
+  TrashIcon,
+  BackLeftArrow
 };

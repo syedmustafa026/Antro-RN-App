@@ -5,7 +5,7 @@ import { appColor } from "../../constants/colors";
 import { Box, Text } from "..";
 import { Verified, CrossIcon, BlueCheck } from "../../assets/svg";
 
-const ProfileModal1 = (props: any) => {
+const ProfileModal2 = (props) => {
   return (
     <Modal animationType="fade" transparent={true} visible={props.visible}>
       <TouchableOpacity activeOpacity={1} style={styles.centeredView}>
@@ -204,4 +204,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ProfileModal1;
+export default ProfileModal2;

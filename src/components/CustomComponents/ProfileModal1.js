@@ -1,6 +1,6 @@
 import React from "react";
 import { Modal, StyleSheet, View, Image, TouchableOpacity } from "react-native";
-
+import ProfileModal2 from "./ProfileModal2";
 import { appColor } from "../../constants/colors";
 import { Box, Text } from "..";
 import {
@@ -10,7 +10,7 @@ import {
   CreateUserProfile,
 } from "../../assets/svg";
 
-const ProfileModal1 = (props: any) => {
+const ProfileModal1 = (props) => {
   return (
     <Modal animationType="fade" transparent={true} visible={props.visible}>
       <TouchableOpacity activeOpacity={1} style={styles.centeredView}>
@@ -97,7 +97,7 @@ const ProfileModal1 = (props: any) => {
             </View>
             <TouchableOpacity
               onPress={() => {
-                props.setModalVisible(false), props.setModa2lVisible(true);
+                props.setModalVisible(false)
               }}
               style={{
                 borderColor: "#E8E8E8",

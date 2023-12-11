@@ -1,23 +1,27 @@
-import React, { useState } from "react";
-import { Image, View, ScrollView, TouchableOpacity } from "react-native";
-import { Box, Text } from "../../components";
-import { AntroLogo, BellIcon, Wave } from "../../assets/svg";
-import { NewProfileBox } from "../../components/CustomComponents/NewProfileBox";
-import { ProfileBox } from "../../components/CustomComponents/ProfileBox";
-import ProfileModal1 from "../../components/CustomComponents/ProfileModal1";
-import ProfileModal2 from "../../components/CustomComponents/ProfileModal2";
+import React, { useState } from "react"
+import { Image, View, ScrollView, TouchableOpacity } from "react-native"
+import { Box, Text } from "../../components"
+import { AntroLogo, BellIcon, Wave } from "../../assets/svg"
+import { NewProfileBox } from "../../components/CustomComponents/NewProfileBox"
+import { ProfileBox } from "../../components/CustomComponents/ProfileBox"
+import ProfileModal1 from "../../components/CustomComponents/ProfileModal1"
+import ProfileModal2 from "../../components/CustomComponents/ProfileModal2"
+import { SCREEN_NAMES } from "../../constants"
 
-const Home = ({ navigation }: any) => {
-  const [profileModal, setProfileModal] = useState(false);
-  const [profileModa2, setProfileModa2] = useState(false);
+const Home = ({ navigation }) => {
+  const [profileModal, setProfileModal] = useState(false)
+  const [profileModa2, setProfileModa2] = useState(false)
+
 
   return (
     <ScrollView>
       <ProfileModal1
         setModalVisible={setProfileModal}
-        setModa2lVisible={setProfileModa2}
-        modal2Visible={profileModa2}
         visible={profileModal}
+      />
+      <ProfileModal2
+        setModalVisible={setProfileModa2}
+        visible={profileModa2}
       />
       <Box flex={1} padding={"8"}>
         <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
@@ -71,7 +75,7 @@ const Home = ({ navigation }: any) => {
         >
           {"Active Profiles"}
         </Text>
-        <ProfileBox />
+        <ProfileBox navigation={navigation} />
         <Text
           color={"#000000"}
           mt={"8"}
@@ -81,12 +85,12 @@ const Home = ({ navigation }: any) => {
         >
           {"Explore new Profiles"}
         </Text>
-        <NewProfileBox />
-        <NewProfileBox />
-        <NewProfileBox />
+        <NewProfileBox navigation={navigation} />
+        <NewProfileBox navigation={navigation} />
+        <NewProfileBox navigation={navigation} />
       </Box>
     </ScrollView>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

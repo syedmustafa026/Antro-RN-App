@@ -12,4 +12,5 @@ export const SCREEN_NAMES = {
   designation: "Designation",
   dashboard: "Dashboard",
   home: "Home",
+  profiles: "Profiles",
 };

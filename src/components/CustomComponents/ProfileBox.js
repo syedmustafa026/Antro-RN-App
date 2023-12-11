@@ -1,6 +1,6 @@
-import React from "react";
-import { Image, View } from "react-native";
-import { Text } from "../../components";
+import React, { useState } from "react";
+import { Image, Pressable, TouchableOpacity, View } from "react-native";
+import { Text } from "..";
 import {
   BookmarkIcon,
   EclipseCircle,
@@ -10,10 +10,14 @@ import {
   ThreeDots,
   Verified,
 } from "../../assets/svg";
+import ProfileOptionModal from "./ProfileOptionModal"
+import { SCREEN_NAMES } from "../../constants";
 
-export const ProfileBox = ({ props }: any) => {
+export const ProfileBox = (props) => {
+  const [optionModal, setOptionModal] = useState(false)
   return (
-    <View
+    <Pressable
+      onPress={() => props.navigation.navigate(SCREEN_NAMES.profiles)}
       style={{
         width: 342,
         height: 245,
@@ -24,6 +28,10 @@ export const ProfileBox = ({ props }: any) => {
         borderWidth: 1,
       }}
     >
+      <ProfileOptionModal
+        setModalVisible={setOptionModal}
+        visible={optionModal}
+      />
       {/* <View
         style={{
           position: "absolute",
@@ -107,7 +115,7 @@ export const ProfileBox = ({ props }: any) => {
           >
             <ShareIcon />
           </View>
-          <View
+          <TouchableOpacity onPress={() => setOptionModal(true)}
             style={{
               padding: 8,
               borderRadius: 15,
@@ -116,7 +124,7 @@ export const ProfileBox = ({ props }: any) => {
             }}
           >
             <ThreeDots />
-          </View>
+          </TouchableOpacity>
         </View>
       </View>
       <View style={{ flexDirection: "row", alignItems: "center" }}>
@@ -213,6 +221,6 @@ export const ProfileBox = ({ props }: any) => {
           <BookmarkIcon />
         </View>
       </View>
-    </View>
+    </Pressable>
   );
 };

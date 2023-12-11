@@ -16,7 +16,8 @@ import {
   PasswordSuccess,
   Splash,
   Welcome,
-  Dashboard
+  Dashboard,
+  Profiles,
 } from "../screens";
 
 const Stack = createNativeStackNavigator();
@@ -48,13 +49,11 @@ const Navigation = () => {
           <Stack.Screen name={SCREEN_NAMES.welcome} component={Welcome} />
           <Stack.Screen name={SCREEN_NAMES.fullname} component={FullName} />
           <Stack.Screen name={SCREEN_NAMES.birthday} component={Birthday} />
-          <Stack.Screen
-            name={SCREEN_NAMES.designation}
-            component={Designation}
+          <Stack.Screen name={SCREEN_NAMES.designation} component={Designation}
           />
-          <Stack.Screen
-            name={SCREEN_NAMES.dashboard}
-            component={Dashboard}
+          <Stack.Screen name={SCREEN_NAMES.dashboard} component={Dashboard}
+          />
+          <Stack.Screen name={SCREEN_NAMES.profiles} component={Profiles}
           />
         </Stack.Navigator>
       </NavigationContainer>

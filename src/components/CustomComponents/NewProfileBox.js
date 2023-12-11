@@ -1,6 +1,6 @@
 import React from "react";
 import { Image, View } from "react-native";
-import { Text } from "../../components";
+import { Text } from "..";
 import {
   BookmarkIcon,
   HeartIcon,
@@ -8,7 +8,7 @@ import {
   Verified,
 } from "../../assets/svg";
 
-export const NewProfileBox = ({ props }: any) => {
+export const NewProfileBox = ( props ) => {
   return (
     <View
       style={{
