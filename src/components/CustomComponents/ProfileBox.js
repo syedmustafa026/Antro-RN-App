@@ -3,18 +3,17 @@ import { Image, Pressable, TouchableOpacity, View } from "react-native";
 import { Text } from "..";
 import {
   BookmarkIcon,
-  EclipseCircle,
   HeartIcon,
   MesssageIcon,
-  ShareIcon,
+  ShareIconWhite,
   ThreeDots,
   Verified,
 } from "../../assets/svg";
-import ProfileOptionModal from "./ProfileOptionModal"
+import ProfileOptionModal from "./ProfileOptionModal";
 import { SCREEN_NAMES } from "../../constants";
 
 export const ProfileBox = (props) => {
-  const [optionModal, setOptionModal] = useState(false)
+  const [optionModal, setOptionModal] = useState(false);
   return (
     <Pressable
       onPress={() => props.navigation.navigate(SCREEN_NAMES.profiles)}
@@ -105,7 +104,10 @@ export const ProfileBox = (props) => {
             marginRight: 14,
           }}
         >
-          <View
+          <Pressable
+            onPress={() =>
+              props.navigation.navigate(SCREEN_NAMES.profileDetails)
+            }
             style={{
               backgroundColor: "#000",
               padding: 10,
@@ -113,9 +115,10 @@ export const ProfileBox = (props) => {
               marginRight: 12,
             }}
           >
-            <ShareIcon />
-          </View>
-          <TouchableOpacity onPress={() => setOptionModal(true)}
+            <ShareIconWhite />
+          </Pressable>
+          <TouchableOpacity
+            onPress={() => setOptionModal(true)}
             style={{
               padding: 8,
               borderRadius: 15,

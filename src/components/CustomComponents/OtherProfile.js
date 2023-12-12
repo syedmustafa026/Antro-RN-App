@@ -1,17 +1,16 @@
 import React, { useState } from "react";
 import { Image, Pressable, ImageBackground, TouchableOpacity, View } from "react-native";
 import { Text } from "..";
+import { Button } from "native-base";
 import {
   BookmarkIcon,
-  EclipseCircle,
   HeartIcon,
   MesssageIcon,
-  ShareIcon,
+  ShareIconWhite,
   ThreeDots,
   Verified,
 } from "../../assets/svg";
 import ProfileOptionModal from "./ProfileOptionModal"
-import { SCREEN_NAMES } from "../../constants";
 import bgImg from '../../assets/images/loop.png'
 
 export const OtherProfileBox = (props) => {
@@ -23,7 +22,7 @@ export const OtherProfileBox = (props) => {
         height: 245,
         marginTop: 12,
         borderRadius: 24,
-        backgroundColor: "#fffaf2",
+        backgroundColor: "#FFF8EC",
         borderColor: "#DFAF62",
         borderWidth: 1,
       }}
@@ -70,7 +69,7 @@ export const OtherProfileBox = (props) => {
                 marginRight: 12,
               }}
             >
-              <ShareIcon />
+              <ShareIconWhite />
             </View>
             <TouchableOpacity onPress={() => setOptionModal(true)}
               style={{
@@ -180,5 +179,6 @@ export const OtherProfileBox = (props) => {
         </View>
       </ImageBackground>
     </Pressable>
+    
   );
 };

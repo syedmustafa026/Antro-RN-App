@@ -13,4 +13,5 @@ export const SCREEN_NAMES = {
   dashboard: "Dashboard",
   home: "Home",
   profiles: "Profiles",
+  profileDetails: 'ProfileDetails'
 };

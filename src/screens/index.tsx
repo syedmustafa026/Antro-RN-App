@@ -12,6 +12,7 @@ import Home from "../screens/Home";
 import Designation from "./designation";
 import Dashboard from "../navigation/dashboard";
 import Profiles from "./profile";
+import ProfileDetails from "./profile/details";
 export {
   Splash,
   AppIntro,
@@ -26,5 +27,6 @@ export {
   Designation,
   Dashboard,
   Home,
-  Profiles
+  Profiles,
+  ProfileDetails,
 };

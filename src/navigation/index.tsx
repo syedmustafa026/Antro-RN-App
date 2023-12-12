@@ -18,6 +18,7 @@ import {
   Welcome,
   Dashboard,
   Profiles,
+  ProfileDetails,
 } from "../screens";
 
 const Stack = createNativeStackNavigator();
@@ -54,6 +55,8 @@ const Navigation = () => {
           <Stack.Screen name={SCREEN_NAMES.dashboard} component={Dashboard}
           />
           <Stack.Screen name={SCREEN_NAMES.profiles} component={Profiles}
+          />
+          <Stack.Screen name={SCREEN_NAMES.profileDetails} component={ProfileDetails}
           />
         </Stack.Navigator>
       </NavigationContainer>
