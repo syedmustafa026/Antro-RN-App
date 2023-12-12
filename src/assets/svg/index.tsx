@@ -32,6 +32,8 @@ import PlusIcon from "./plus.svg";
 import ArrowDown from "./arrow-down.svg";
 import ShareIconBlack from "./share-black.svg";
 import ThumbsUpIcon from "./thumbs-up.svg";
+import SendArrow from "./send-arrow.svg";
+import CopyText from "./copy-text.svg";
 export {
   AntroLogoSvg,
   PartyIcon,
@@ -66,5 +68,7 @@ export {
   PlusIcon,
   ArrowDown,
   ShareIconBlack,
-  ThumbsUpIcon
+  ThumbsUpIcon,
+  SendArrow,
+  CopyText,
 };

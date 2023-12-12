@@ -7,9 +7,11 @@ import {
   Pressable,
 } from "react-native";
 import { Box, Text } from "../../components";
-import ProfileModal1 from "../../components/CustomComponents/ProfileModal1";
 import { appColor } from "../../constants/colors";
 import ProfileOptionModal from "../../components/CustomComponents/ProfileOptionModal";
+import { SCREEN_NAMES } from "../../constants"
+import ProfileModal2 from "../../components/CustomComponents/ProfileModal2";
+import { Input } from "native-base";
 import {
   BookmarkIcon,
   HeartIcon,
@@ -21,22 +23,20 @@ import {
   ArrowDown,
   ShareIconBlack,
   ThumbsUpIcon,
+  SendArrow,
 } from "../../assets/svg";
-import { SCREEN_NAMES } from "../../constants";
+
 const ProfileDetails = ({ navigation }) => {
-  const [profileModal, setProfileModal] = useState(false);
   const [profileModa2, setProfileModa2] = useState(false);
   const [optionModal, setOptionModal] = useState(false);
 
   return (
-    <ScrollView>
-      <ProfileModal1
-        setModalVisible={setProfileModal}
-        setModa2lVisible={setProfileModa2}
-        modal2Visible={profileModa2}
-        visible={profileModal}
-      />
-      <Box flex={1} bgColor={appColor.white}>
+    <Box flex={1} bgColor={appColor.white}>
+      <ScrollView>
+        <ProfileModal2
+          setModalVisible={setProfileModa2}
+          visible={profileModa2}
+        />
         {/* Header */}
         <View
           style={{
@@ -49,7 +49,8 @@ const ProfileDetails = ({ navigation }) => {
           <Pressable onPress={() => navigation.goBack()}>
             <BackLeftArrow />
           </Pressable>
-          <View
+          <Pressable
+            onPress={() => setProfileModa2(true)}
             style={{
               alignSelf: "center",
               flexDirection: "row",
@@ -66,7 +67,7 @@ const ProfileDetails = ({ navigation }) => {
               {"View Profiles"}
             </Text>
             <ArrowDown />
-          </View>
+          </Pressable>
           <ShareIconBlack />
         </View>
         <Pressable
@@ -97,7 +98,7 @@ const ProfileDetails = ({ navigation }) => {
                 borderWidth: 4,
               }}
               source={{
-                uri: "https://s3-alpha-sig.figma.com/img/7fdc/cc78/3264eedc4fb989984eecbc4058a219f2?Expires=1702252800&Signature=fcIa1eKN4Pc1bXBeAS2EYMT1uweksCZDrrBQAbcqv4y415H~UCAJsBD-N78QRXHlZ8nArHivq1jMRUkBDMFB3GIFFMIf33gLXrove~~ddZ3BujUYWtago0NMyTI1HOaxyodRURBeJ1Ul0Z3QNq1h8a0z4RFseSW0Z5JxeIvVe7TVzBTfDdSdDNM-eyRkUwTsxuj1gQVAivl~n7rGWAFls5tmwPgrSbZeUG1l~YtZCY-Mj4VA-kYqEYQD0nnDWHB-RRE0aMoIuUljShb2PbCWIGaQKOmlzzFm3g2g4XnGsMNi9Cb8RmcKEMz-8voNFP7w3C8TzZbZu9Jv4~94BCE0Yw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+                uri: "https://t3.ftcdn.net/jpg/02/58/89/90/360_F_258899001_68CalsKTRk6PZQgWH9JhR4heBlncCko9.jpg",
               }}
             />
             <View
@@ -429,7 +430,7 @@ const ProfileDetails = ({ navigation }) => {
               marginTop: 13,
             }}
             source={{
-              uri: "https://s3-alpha-sig.figma.com/img/7fdc/cc78/3264eedc4fb989984eecbc4058a219f2?Expires=1702252800&Signature=fcIa1eKN4Pc1bXBeAS2EYMT1uweksCZDrrBQAbcqv4y415H~UCAJsBD-N78QRXHlZ8nArHivq1jMRUkBDMFB3GIFFMIf33gLXrove~~ddZ3BujUYWtago0NMyTI1HOaxyodRURBeJ1Ul0Z3QNq1h8a0z4RFseSW0Z5JxeIvVe7TVzBTfDdSdDNM-eyRkUwTsxuj1gQVAivl~n7rGWAFls5tmwPgrSbZeUG1l~YtZCY-Mj4VA-kYqEYQD0nnDWHB-RRE0aMoIuUljShb2PbCWIGaQKOmlzzFm3g2g4XnGsMNi9Cb8RmcKEMz-8voNFP7w3C8TzZbZu9Jv4~94BCE0Yw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+              uri: "https://t3.ftcdn.net/jpg/02/58/89/90/360_F_258899001_68CalsKTRk6PZQgWH9JhR4heBlncCko9.jpg",
             }}
           />
           <View
@@ -517,7 +518,7 @@ const ProfileDetails = ({ navigation }) => {
               marginTop: 13,
             }}
             source={{
-              uri: "https://s3-alpha-sig.figma.com/img/7fdc/cc78/3264eedc4fb989984eecbc4058a219f2?Expires=1702252800&Signature=fcIa1eKN4Pc1bXBeAS2EYMT1uweksCZDrrBQAbcqv4y415H~UCAJsBD-N78QRXHlZ8nArHivq1jMRUkBDMFB3GIFFMIf33gLXrove~~ddZ3BujUYWtago0NMyTI1HOaxyodRURBeJ1Ul0Z3QNq1h8a0z4RFseSW0Z5JxeIvVe7TVzBTfDdSdDNM-eyRkUwTsxuj1gQVAivl~n7rGWAFls5tmwPgrSbZeUG1l~YtZCY-Mj4VA-kYqEYQD0nnDWHB-RRE0aMoIuUljShb2PbCWIGaQKOmlzzFm3g2g4XnGsMNi9Cb8RmcKEMz-8voNFP7w3C8TzZbZu9Jv4~94BCE0Yw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+              uri: "https://s3-alpha-sig.figma.com/img/08e4/55fe/112b5aa889f8276e41832a747a9bda45?Expires=1703462400&Signature=KXwg~ZjjMSjzTZnzGmaUhkYew27CstoZgfILLAPf79qWRARTK30cfe7bbRY0L5EB1Osc5odqqHY-pl~q~qE2cUISRVTFpJV1WWofJaJXhOrZtjKr~5LvF6O1zS4dwq0K1ba8y8bu7F3J4KgttKvQIt5Zw4-XI9mkqhT3KzwAmMGjMOnHOKZYnDfoJiKOiV8QSs-x6wy2vo19ijCcwS1T1DZTw0jaQ4xrYHQ06OiodcUOHtXPDJGwCeWEbJ7zE0rylyR1~FxEfQleGwC1ox2s7a6d~DxJ~-cGlLhlWauFT19ytgGmtTg7a75dtamAYoYIqNFfd2OcK2KLVQoi~1aHXQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
             }}
           />
           <View
@@ -545,7 +546,7 @@ const ProfileDetails = ({ navigation }) => {
                 fontSize={"16"}
                 fontWeight={"600"}
               >
-                {"Sam Paul"}
+                {"Maria Paul"}
               </Text>
               <Verified />
             </View>
@@ -587,8 +588,58 @@ const ProfileDetails = ({ navigation }) => {
             </View>
           </View>
         </View>
-      </Box>
-    </ScrollView>
+      </ScrollView>
+      <View style={{
+        width: "100%",
+        height: 60,
+        flexDirection: 'row',
+        backgroundColor: appColor.white,
+        borderTopLeftRadius: 18,
+        borderTopRightRadius: 18,
+        shadowColor: "#000",
+        shadowOffset: {
+          width: 0,
+          height: 2,
+        },
+        shadowOpacity: 0.23,
+        shadowRadius: 2.62,
+        borderRadius: 10,
+        elevation: 9,
+      }}>
+        <Image
+          style={{
+            width: 42,
+            height: 42,
+            borderRadius: 100,
+            marginLeft: 20,
+            marginVertical: 13,
+          }}
+          source={{
+            uri: "https://s3-alpha-sig.figma.com/img/aac6/b1b1/8acee54880feb3c84cfacdb2ff89076d?Expires=1703462400&Signature=l3nxlT78eYiXNsQ5k5bsYZFvQifDNV7oqiMErt~V7RX0-jLk19qWUx-hxnFqOvkfHpZjaz~4wuW3wDxTJQGlLmvnCPkhUAPaUylgbPcUKvXLGwZDOzBjYdGpUE10PCGcS42HRDWxbaJb8xkfkr-0UTJaTAtPMu3B1q67MQYflKDsA9~e8~sPaIImFNHEU9Qho0ZQAvPLFUeAdgyeGNL3un1f0LpwFz1F02mA3NDJXTyows~gZcWAm9nebBd646MsMNzmOZf~0uT8atV1FzGZpGTjD66WXbqpHdMSUZqH-hYvHrGv6jNM4z8jNXlIkJzhz49DlQhpXeg4mUq1-d1Dfg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+          }}
+        />
+        <View style={{ width: '70%', paddingTop: 8 }}>
+          <Input
+            style={{
+              fontSize: 16,
+              backgroundColor: "#F7F8F9",
+              paddingTop: 12,
+              paddingBottom: 6,
+              paddingLeft: 12,
+              width: "70%",
+            }}
+            marginLeft={3}
+            borderRadius={"3xl"}
+            fontWeight={"medium"}
+            placeholder="     Add a comment"
+            focusOutlineColor={"#F7F8F9"}
+          />
+        </View>
+        <TouchableOpacity style={{ alignItems: 'center', flex: 1, justifyContent: 'center' }}>
+          <SendArrow />
+        </TouchableOpacity>
+      </View>
+    </Box>
   );
 };
 
