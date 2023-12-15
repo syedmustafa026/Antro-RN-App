@@ -14,6 +14,7 @@ const Home = ({ navigation }) => {
       <ProfileModal1
         setModalVisible={setProfileModal}
         visible={profileModal}
+        navigation={navigation}
       />
       <Box flex={1} padding={"8"}>
         <View style={{ flexDirection: "row", justifyContent: "space-between" }}>

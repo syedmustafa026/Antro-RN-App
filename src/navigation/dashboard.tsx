@@ -2,7 +2,10 @@ import React, { useState, useEffect } from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { HomeIcon, MenuBar, PlainMessageIcon, SearchIcon } from "../assets/svg";
 import { appColor } from "../constants/colors";
-import { Designation, Home, FullName, Birthday, Profiles } from "../screens";
+import Birthday from "../screens/birthday";
+import Home from "../screens/Home";
+import Designation from "../screens/designation";
+import Profiles from "../screens/profile";
 
 const Tab = createBottomTabNavigator();
 

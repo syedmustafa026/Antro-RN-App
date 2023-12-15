@@ -34,6 +34,10 @@ import ShareIconBlack from "./share-black.svg";
 import ThumbsUpIcon from "./thumbs-up.svg";
 import SendArrow from "./send-arrow.svg";
 import CopyText from "./copy-text.svg";
+import HalfProgressBar from "./progressBar_1.svg";
+import MidProgressBar from "./progressBar_2.svg";
+import FullProgressBar from "./progress_bar_3.svg";
+import AddImage from "./image.svg";
 export {
   AntroLogoSvg,
   PartyIcon,
@@ -71,4 +75,8 @@ export {
   ThumbsUpIcon,
   SendArrow,
   CopyText,
+  HalfProgressBar,
+  MidProgressBar,
+  FullProgressBar,
+  AddImage
 };

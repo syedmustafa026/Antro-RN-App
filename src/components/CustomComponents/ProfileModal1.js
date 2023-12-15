@@ -1,5 +1,5 @@
 import React from "react";
-import { Modal, StyleSheet, View, Image, TouchableOpacity } from "react-native";
+import { Modal, StyleSheet, View, Image, TouchableOpacity, Pressable } from "react-native";
 import ProfileModal2 from "./ProfileModal2";
 import { appColor } from "../../constants/colors";
 import { Box, Text } from "..";
@@ -9,6 +9,7 @@ import {
   BlueCheck,
   CreateUserProfile,
 } from "../../assets/svg";
+import { SCREEN_NAMES } from "../../constants";
 
 const ProfileModal1 = (props) => {
   return (
@@ -131,7 +132,11 @@ const ProfileModal1 = (props) => {
               }}
             />
           </View>
-          <View
+          <Pressable 
+          onPress={()=>{
+            props.setModalVisible(false),
+            props.navigation.navigate(SCREEN_NAMES.createProfileInfo)
+          }}
             style={{
               flexDirection: "row",
               alignItems: "center",
@@ -149,7 +154,7 @@ const ProfileModal1 = (props) => {
             >
               {"Create Another Profile"}
             </Text>
-          </View>
+          </Pressable>
         </View>
       </TouchableOpacity>
     </Modal>
