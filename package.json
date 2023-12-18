@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@react-navigation/bottom-tabs": "^6.5.11",
+    "@react-navigation/material-top-tabs": "^6.6.5",
     "@react-navigation/native": "^6.1.9",
     "@react-navigation/native-stack": "^6.9.16",
     "axios": "^1.6.0",
@@ -21,10 +22,13 @@
     "react-native-config": "^1.5.1",
     "react-native-fast-image": "^8.6.3",
     "react-native-linear-gradient": "^2.8.3",
+    "react-native-pager-view": "^6.2.3",
+    "react-native-paper": "^5.11.4",
     "react-native-reanimated": "^3.5.4",
     "react-native-safe-area-context": "3.3.2",
     "react-native-screens": "^3.27.0",
-    "react-native-svg": "12.1.1"
+    "react-native-svg": "12.1.1",
+    "react-native-tab-view": "^3.5.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

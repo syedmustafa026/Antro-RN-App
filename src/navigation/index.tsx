@@ -10,7 +10,7 @@ import Login from "../screens/login";
 import OTP from "../screens/otp";
 import Splash from "../screens/splash";
 import Password from "../screens/password";
-import PasswordSuccess from "../screens/passwordsuccess";
+import PasswordSuccess from "../screens/success/passwordSuccess";
 import Welcome from "../screens/welcome";
 import FullName from "../screens/fullname";
 import Birthday from "../screens/birthday";
@@ -21,6 +21,7 @@ import ProfileDetails from "../screens/profile/details";
 import CreateProfileInfo from "../screens/createProfile/profileInfo";
 import CreateBusinessInfo from "../screens/createProfile/businessInfo";
 import CreateProfileStyle from "../screens/createProfile/profilestyle";
+import ProfileSuccess from "../screens/success/profileSuccess";
 
 const Stack = createNativeStackNavigator();
 const Navigation = () => {
@@ -52,6 +53,7 @@ const Navigation = () => {
           <Stack.Screen name={SCREEN_NAMES.createProfileInfo} component={CreateProfileInfo} />
           <Stack.Screen name={SCREEN_NAMES.createBuisnessInfo} component={CreateBusinessInfo} />
           <Stack.Screen name={SCREEN_NAMES.createProfileStyles} component={CreateProfileStyle} />
+          <Stack.Screen name={SCREEN_NAMES.profilesuccess} component={ProfileSuccess} />
         </Stack.Navigator>
       </NavigationContainer>
     </NativeBaseProvider>

@@ -9,16 +9,40 @@ import { Input } from "native-base";
 import { height, width } from "../../constants/dimension";
 import { SCREEN_NAMES } from "../../constants";
 import { ProfileBox } from "../../components/CustomComponents/ProfileBox";
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import { ToggleButton } from 'react-native-paper';
+import ProfileVerifyModal from "../../components/CustomComponents/ProfileVerifyModal";
 
+const Tab = createMaterialTopTabNavigator()
 
 const CreateProfileStyle = ({ navigation }) => {
+  const [value, setValue] = useState('left')
+  const [verifyModal, setVerifyModal] = useState(false)
 
   const btnContinueHandler = () => {
-    navigation.navigate(SCREEN_NAMES.dashboard);
+    setVerifyModal(true)
   };
+  const RenderTemplates = () => {
+    return (
+      <View style={{ flex: 1 }}>
+        <ToggleButton.Row onValueChange={value => setValue(value)} value={value}>
+          <ToggleButton icon={<BackLeftArrow />} value="left" />
+          <ToggleButton icon={<BackLeftArrow />} value="right" />
+        </ToggleButton.Row>
+        <Text color={"#000000"} mt={"3"} fontSize={"26"} fontWeight={"700"}>
+          {"Style your profile"}
+        </Text>
+      </View>
+    )
+  }
   return (
     <View style={styles.container}>
       <ScrollView>
+        <ProfileVerifyModal
+          setModalVisible={setVerifyModal}
+          visible={verifyModal}
+          navigation={navigation}
+        />
         <Box flex={1} padding={"5"}>
           {/* Header */}
           <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 36 }}>
@@ -58,6 +82,17 @@ const CreateProfileStyle = ({ navigation }) => {
           >
             {"Select your template"}
           </Text>
+          <Tab.Navigator screenOptions={{
+            swipeEnabled: false,
+            tabBarActiveTintColor: appColor.black,
+            tabBarAndroidRipple: true,
+            tabBarIndicatorStyle: { backgroundColor: appColor.black },
+            tabBarStyle: { backgroundColor: appColor.white },
+          }}>
+            <Tab.Screen name="New" component={RenderTemplates} />
+            <Tab.Screen name="Creative" component={RenderTemplates} />
+            <Tab.Screen name="Proffesiona" component={RenderTemplates} />
+          </Tab.Navigator>
         </Box>
       </ScrollView>
       <Box style={{

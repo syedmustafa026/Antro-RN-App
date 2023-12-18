@@ -6,6 +6,7 @@ export const SCREEN_NAMES = {
   otp: "OTP",
   createpassword: "Create Password",
   passwordsuccess: "Password Success",
+  profilesuccess: 'Profile Success',
   welcome: "Welcome",
   fullname: "Full Name",
   birthday: "Birthday",

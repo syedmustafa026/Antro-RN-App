@@ -17,7 +17,7 @@ import { height } from "../../constants/dimension";
 import LinearGradient from "react-native-linear-gradient";
 const ProfileShareModal = (props) => {
   return (
-    <Modal animationType="fade" transparent={true} visible={props.visible}>
+    <Modal animationType="slide" transparent={true} visible={props.visible}>
       <View style={styles.modalView}>
         <LinearGradient colors={['#FFF5D7', '#FFF5D7', '#FFF5CE']} style={styles.linearGradient}>
           <View style={styles.modalBody}>

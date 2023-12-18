@@ -1,16 +1,11 @@
-import React, { useState } from "react";
-import { Image, Pressable, TouchableOpacity, View } from "react-native";
+import React from "react";
+import { Pressable, TouchableOpacity } from "react-native";
 import { Text } from "..";
 import { Button, Icon, Ionicons } from "native-base";
 import { PlusIcon, TrashIcon } from "../../assets/svg";
-import ProfileOptionModal from "./ProfileOptionModal";
-import { SCREEN_NAMES } from "../../constants";
-import bgImg from "../../assets/images/loop.png";
 import { appColor } from "../../constants/colors";
-import { appStyles } from "../../styles";
 
 export const ProfileCreateBox = (props) => {
-  const [optionModal, setOptionModal] = useState(false);
   return (
     <Pressable
       style={{
